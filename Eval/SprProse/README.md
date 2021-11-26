@@ -1,6 +1,6 @@
 # Prose-Spreadsheet
 
-In the file management domain, the DSL for Prose is from an [existing work](https://dl.acm.org/doi/10.1145/2908080.2908088).
+In the file management domain, the DSL for Prose is from an [existing work](https://dl.acm.org/doi/10.1145/1993498.1993536).
 
 This DSL adopts the following assumptions:
 1. The row-major order of cells is preserved (i.e., in both input spreadsheet and output spreadsheet).
