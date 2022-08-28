@@ -13,3 +13,9 @@ Please go to `Eval/Benchmarks` for the dataset.
 ## Implementations For Evaluation
 
 For the PBE tools used in the evaluation, please go to `Eval`.
+
+## Misc
+
+Example TikTok effect in motivating example:
+
+<img src="tiktok-loop.gif" alt="drawing" width="200">
