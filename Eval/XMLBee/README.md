@@ -90,6 +90,16 @@ For instance, below is the XML tree and corresponding tables of example input XM
 ---------------------------------------------
 ```
 
-The actions are similar to common XML manipulation APIs, e.g., `appendChild`, `deleteElement`, `modifyAttribute`.
+The actions are similar to common XML manipulation APIs.
+* deleteElem: `<"deleteElem", elem: Id (ElementEntity)>`
+* modifyText: `<"modifyText", elem: Id (ElementEntity), newText: String>`
+* modifyAttr: `<"modifyAttr", elem: Id (AttributeEntity), newVal: String>`
+* modifyTag: `<"modifyTag", elem: Id (ElementEntity), newTag: String>`
+* addElem: `<"addElem", elem: Id (ElementEntity), newTag: String, newText: String>`
+* addElemAbove: `<"addElemAbove", elem: Id (ElementEntity), newTag: String, newText: String>`
+* addAttr: `<"addAttr", elem: Id (ElementEntity), key: String, val: String>`
+* wrap: `<"wrap", elem: Id (ElementEntity), tag: String>`
+* moveBelow: `<"moveBelow", elem: Id (ElementEntity), target: Id (ElementEntity)>`
+* appendChild: `<"appendChild", elem: Id (ElementEntity), target: Id (ElementEntity)>`
 
-The `XmlEntities.cs` specifies the detailed schema and actions using the annotation APIs provided by Bee.
+`XmlEntities.cs` specifies the detailed schema, and `XmlActions` specifies the actions using the annotation APIs provided by Bee.
