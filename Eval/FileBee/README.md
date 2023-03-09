@@ -18,6 +18,16 @@ For instance, below is the table of example input files in Hades01.
 ----------------------------------------------------------------------------------------------------------------------------------------
 ```
 
-The user actions include common user actions, e.g., rename, unzip, move.
+The user actions include common user actions managing files.
 
-The `FileEntity.cs` specifies the detailed schema and actions using the annotation APIs provided by Bee.
+* chmod: `<"chmod", file: Id, mod: String>`, e.g., `chmod file1 "+x"`
+* copy: `<"copy", file: Id, path: String>`, e.g., `copy file1 "new/path/"`
+* unzip: `<"unzip", file: Id, path: String>`, e.g., `unzip file1 "path/to/extract"`
+* move: `<"move", file: Id, path: String>`, e.g., `move file1 "new/path"`
+* rename: `<"rename", file: Id, newName: String>`, e.g., `rename file1 "new name"`
+* delete: `<"delete", file: Id>`, e.g., `delete file1`
+* chgrp: `<"chgrp", file: Id, newGroup: String>`, e.g., `chgrp file1 "new group"`
+* chext: `<"chext", file: Id, newExtension: String>`, e.g., `chext file1 "new extension"`
+* tar: `<"tar", files:IdSet, fileName: String>`, e.g., `tar {file1,file2,file3,...} "compressed.tar"`
+
+`FileEntity.cs` specifies the detailed schema and actions using the annotation APIs provided by Bee.
