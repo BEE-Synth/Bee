@@ -63,5 +63,6 @@ For instance, below are the tables of example input spreadsheets in the benchmar
 ```
 
 The only user action is `Fill`, which is parameterized by the content to fill and the coordinate (row and column).
+* fill: `<"fill", content: String, row: Int, col: Int>`
 
 The `SprSheetEntities.cs` specifies the detailed schema and actions using the annotation APIs provided by Bee.
